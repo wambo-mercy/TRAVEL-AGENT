@@ -1,29 +1,215 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Hero Section */
 .hero {
-    background: url('https://source.unsplash.com/1600x600/?travel,beach') no-repeat center center;
-    background-size: cover;
-    color: white;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-  }
-  
+  background: url('https://source.unsplash.com/1600x600/?travel,beach') no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin: 10px 0;
+}
+
+.hero .btn {
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: black;
+  background-color: white;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #333;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: black;
+}
+
+.navbar .nav-link {
+  color: black;
+  font-size: 1.1rem;
+  padding: 8px 15px;
+}
+
+.navbar .nav-link:hover {
+  color: #ff6f61;
+}
+
+/* Destinations Section */
+#destinations .card {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#destinations .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#destinations .card-img-top {
+  border-radius: 5px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Tour Packages Section */
+.accordion-button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.accordion-body {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Contact Section */
+#contact form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact input, #contact textarea {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  padding: 12px;
+  width: 100%;
+}
+
+#contact button {
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#contact button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff6f61;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .hero h1 {
-    font-size: 4rem;
-    font-weight: bold;
+    font-size: 2.5rem;
   }
-  
-  .footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-  }
-  
-  .social-icons a {
-    margin: 0 10px;
-    color: #333;
-    text-decoration: none;
+
+  .hero p {
     font-size: 1.2rem;
   }
-  
+
+  .card-body .btn {
+    font-size: 1rem;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .social-icons a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    font-size: 1rem;
+  }
+
+  .navbar .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar .nav-link {
+    padding: 8px 10px;
+  }
+
+  #contact form {
+    padding: 20px;
+  }
+}
+
